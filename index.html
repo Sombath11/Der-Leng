@@ -1,16 +1,694 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="stylesheet" href="./src/output.css">
-    <title>Der Leng</title>
-</head>
-<body>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Title -->
+    <title>ទំព័រដើម - ទេសចរណ៍កម្ពុជា</title>
 
+    <!-- Meta Description (SEO) -->
+    <meta
+      name="description"
+      content="ស្វែងយល់អំពីកម្ពុជា តាមរយៈព័ត៌មានទេសចរណ៍ កន្លែងប្រវត្តិសាស្រ្ត វប្បធម៌ ម្ហូបអាហារ និងសកម្មភាពជាច្រើន។"
+    />
 
-    
-</body>
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="ទេសចរណ៍កម្ពុជា, Cambodia Tourism, Travel Cambodia, Angkor Wat, Siem Reap, Phnom Penh, Khmer Culture"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Your Team or Organization Name" />
+
+    <!-- Primary Thumbnail (Google & SEO Fallback) -->
+    <meta
+      name="image"
+      content="https://deploy-final-project-q3sq.vercel.app/img/derLengMetaData.png"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./img/logo/logoFooter.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./img/logo/logoFooter.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="./img/logo/logoFooter.png" />
+    <link
+      rel="shortcut icon"
+      href="./img/logo/logoFooter.png"
+      type="image/x-icon"
+    />
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="ទេសចរណ៍កម្ពុជា - គោលដៅដ៏អស្ចារ្យ" />
+    <meta
+      property="og:description"
+      content="ស្វែងយល់ពីប្រវត្តិសាស្រ្ត វប្បធម៌ និងកន្លែងទេសចរណ៍ដ៏ស្រស់ស្អាតនៅកម្ពុជា។"
+    />
+    <meta
+      property="og:image"
+      content="https://deploy-final-project-q3sq.vercel.app/img/derLengMetaData.png"
+    />
+    <meta
+      property="og:url"
+      content="https://deploy-final-project-q3sq.vercel.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="km_KH" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ទេសចរណ៍កម្ពុជា - គោលដៅដ៏អស្ចារ្យ" />
+    <meta
+      name="twitter:description"
+      content="សូមមកស្វែងយល់ពីប្រវត្តិសាស្រ្ត និងវប្បធម៌កម្ពុជា។"
+    />
+    <meta
+      name="twitter:image"
+      content="https://deploy-final-project-q3sq.vercel.app/img/derLengMetaData.png"
+    />
+    <meta
+      name="twitter:url"
+      content="https://deploy-final-project-q3sq.vercel.app/"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script
+      src="https://kit.fontawesome.com/5ce14b4205.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="bg-background dark:bg-dark_background dark:text-white font-primary"
+  >
+    <header class="bg-white dark:text-white w-full shadow sticky top-0 z-10">
+      <nav
+        class="lg:container mx-auto flex items-center justify-between px-4 py-2"
+      >
+        <a href="/index.html" class="Logo">
+          <img
+            class="h-auto max-md:w-[100px] md:w-[140px]"
+            src="img/logo/logoHeader.png"
+            alt="Logo"
+          />
+        </a>
+        <button
+          id="menu-toggle"
+          class="lg:hidden text-accent cursor-pointer self-center text-3xl text-gray-850 focus:outline-none"
+        >
+          <ion-icon name="menu" id="menu-icon"></ion-icon>
+        </button>
+
+        <div
+          id="nav-links"
+          class="hidden bg-white lg:flex lg:items-center lg:gap-8 absolute top-16 left-0 w-full lg:static lg:w-auto p-4 max-sm:p-5 lg:p-0 shadow-lg lg:shadow-none transition-all duration-300 ease-in-out"
+        >
+          <ul
+            class="flex font-primary max-lg:flex-col gap-6 lg:gap-8 text-lg max-lg:items-start font-medium"
+          >
+            <li>
+              <a
+                href="#"
+                class="text-secondary dark:text-dark-secondary transition-colors"
+                >ទំព័រដើម</a
+              >
+            </li>
+            <li>
+              <a
+                href="html/about.html"
+                class="text-accent hover:text-secondary transition-colors"
+                >អំពីពួកយើង</a
+              >
+            </li>
+            <li>
+              <a
+                href="html/desti.html"
+                class="text-accent hover:text-secondary transition-colors"
+                >គោលដៅ</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="flex font-primary flex-col lg:flex-row gap-4 mt-6 lg:mt-0"
+          >
+            <button
+              id="toggleTheme"
+              type="button"
+              class="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary dark:bg-blue-950 dark:hover:bg-blue-900 shadow-sm outline-none ring-0 transition-colors duration-500"
+              aria-label="Toggle dark mode"
+            >
+              <!-- SUN (visible in light, hides in dark) -->
+              <svg
+                class="absolute h-7 w-7 text-white transition-all duration-300 ease-out opacity-100 scale-100 rotate-0 dark:opacity-0 dark:scale-75 dark:rotate-90"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M440-800v-120h80v120h-80Zm0 760v-120h80v120h-80Zm360-400v-80h120v80H800Zm-760 0v-80h120v80H40Zm708-252-56-56 70-72 58 58-72 70ZM198-140l-58-58 72-70 56 56-70 72Zm564 0-70-72 56-56 72 70-58 58ZM212-692l-72-70 58-58 70 72-56 56Zm268 452q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Z"
+                />
+              </svg>
+
+              <!-- MOON (hidden in light, shows in dark) -->
+              <svg
+                class="absolute h-7 w-7 text-white transition-all duration-300 ease-out opacity-0 scale-75 rotate-90 dark:opacity-100 dark:scale-100 dark:rotate-0"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Z"
+                />
+              </svg>
+            </button>
+
+            <!-- <button
+              class="group relative w-fit inline-flex h-12 items-center justify-center overflow-hidden rounded-[10px] border border-neutral-200 cursor-pointer bg-primary dark:bg-blue-950 px-[22px] font-medium text-white transition-all active:translate-y-[2px] active:shadow-none"
+              href="html/loginnnn.html"
+            >
+              <a href="/html/loginnnn.html">ចុះឈ្មោះ</a>
+            </button> -->
+
+            <!-- <button
+              id="dropdownDelayButton"
+              data-dropdown-toggle="dropdownDelay"
+              data-dropdown-delay="500"
+              class="border-neutral-200 h-12 w-fit bg-primary text-white cursor-pointer focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:bg-blue-950 dark:hover:bg-blue-900"
+              type="button"
+            >
+              ផ្សេងៗ
+              <svg
+                class="w-2.5 h-2.5 ms-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button> -->
+            <!-- Dropdown menu -->
+            <!-- <div
+              id="dropdownDelay"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-blue-950"
+            >
+              <ul
+                class="py-2 rounded-lg text-sm text-white bg-primary dark:bg-blue-950"
+                aria-labelledby="dropdownDelayButton"
+              >
+                <li>
+                  <a
+                    href="./html/post.html"
+                    class="block px-4 py-2 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >បន្ថែមទីកន្លែង</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./html/update.html"
+                    class="block px-4 py-2 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >ធ្វើបច្ចុប្បន្នភាពទីកន្លែង</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./html/delete.html"
+                    class="block px-4 py-2 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >លុបទីកន្លែង</a
+                  >
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="font-primary dark:text-white pb-10 dark:bg-dark_background z-0"
+    >
+      <!-- hero section -->
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0">
+          <img
+            class="w-full md:h-[90vh] max-md:h-[100vh] object-cover"
+            src="/img/home/Hero1.jpg"
+            alt="Ancient Temple Ruins"
+          />
+          <div
+            class="absolute bg-black/40 md:h-[90vh] max-md:h-[100vh] inset-0"
+          ></div>
+        </div>
+        <div
+          class="relative px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-center max-sm:h-[100vh] h-[90vh]"
+        >
+          <div class="text-center">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-6xl xl:text-[75px] font-extrabold text-white flex flex-col"
+              data-aos="fade-down"
+            >
+              <span
+                class="block md:p-[18px] dark:bg-gradient-to-r dark:form-white dark:to-blue-200 bg-gradient-to-r from-white to-teal-200 text-transparent bg-clip-text"
+              >
+                សូមស្វាគមន៍មកកាន់គេហទំព័រ <br class="mt-4" />ទេសចរណ៍កម្ពុជា
+              </span>
+              <!-- <span
+                class="block p-[20px] bg-gradient-to-r from-teal-100 to-white text-transparent bg-clip-text"
+              >
+                ទេសចរណ៍កម្ពុជា
+              </span> -->
+            </h2>
+            <p
+              class="mt-4 md:max-w-2xl lg:mt-[40px] mx-auto md:text-[26px] max-md:text-[20px] text-shadow-md text-shadow-gray-700 leading-relaxed text-white"
+              data-aos="fade-up"
+            >
+              នៅលើគេហទំព័ររបស់យើង អ្នកនឹងរកឃើញព័ត៌មានលម្អិតអំពីប្រវត្តិសាស្រ្ត
+              ប្រវត្តិរូបក្សត្រាធិរាជ ទីតាំងទេសចរណ៍ដ៏ស្រស់ស្អាត ម្ហូបអាហារ
+              ទំនៀមទម្លាប់ សិល្បៈ និងសកម្មភាពផ្សេងៗជាច្រើនទៀត។
+            </p>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              class="flex justify-center"
+            >
+              <a href="./html/desti.html">
+                <button
+                  class="group cursor-pointer flex justify-center lg:mt-[40px] mt-6 relative h-12 items-center overflow-hidden rounded-[10px] border border-neutral-200 bg-transparent px-6 font-medium text-white transition-all active:translate-y-[2px] active:shadow-none"
+                >
+                  គោលដៅ
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section1 -->
+      <section class="lg:container px-4 sm:py-5 max-sm:py-4 lg:mx-auto">
+        <!-- title -->
+        <div class="rounded-[10px] flex flex-col">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="max-md:text-3xl text-center md:text-4xl sm:text-2xl max-sm:text-[22px] text-secondary dark:text-dark-secondary font-bold md:mt-8 max-md:mt-5"
+          >
+            <span
+              class="text-2xl md:text-3xl font-extrabold px-[10px] py-[2px] rounded-[10px] bg-white text-secondary dark:text-dark-secondary"
+              >១</span
+            >
+            កន្លែងទេសចរណ៍ពេញនិយមនៅកម្ពុជា
+          </h2>
+
+          <p
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="text-[17px] text-center dark:text-white md:py-8 max-md:py-5 md:text-[20px] text-accent"
+          >
+            កម្ពុជាជាប្រទេសមួយដែលសម្បូរទៅដោយតំបន់ទេសចរណ៍ប្លែកៗ គ្រប់ប្រភេទ។
+            មិនថាជាកន្លែងប្រវត្តិសាស្ត្រ ព្រៃភ្នំ សមុទ្រ និងកោះ
+            ឬកន្លែង​​​កម្សាន្តផ្សេងៗទៀតទេ យើងមានជម្រើសជាច្រើន។
+            តទៅនេះគឺជាកន្លែងទេសចរណ៍ពេញនិយមទាំង ៤ នៅក្នុងប្រទេសកម្ពុជា។
+            សម្រាប់អ្នកដែលចង់ទៅលេងកម្សាន្តនៅកម្ពុជា
+            មួយក្នុងចំណោមកន្លែងទេសចរណ៍ទាំង ខាងក្រោមនេះ គឺជាជម្រើសដ៏ល្អបំផុត។
+          </p>
+        </div>
+        <!-- btn -->
+        <div id="province_buttons" class="flex flex-wrap gap-2"></div>
+        <!-- grid -->
+        <div
+          id="province_categories"
+          class="grid md:grid-cols-[1fr_1fr_1fr] max-lg:h-[50vh] lg:h-[85vh] md:h-[80vh] max-md:h-[60vh] max-sm:h-[40vh] grid-rows-[1fr_1fr] md:gap-4 max-md:gap-2 max-sm:gap-1"
+        ></div>
+      </section>
+      <!-- section2 -->
+      <section
+        class="relative bg-white dark:bg-accent/40 overflow-hidden sm:py-10 sm:my-10"
+      >
+        <div class="lg:container px-4 py-4 lg:mx-auto relative">
+          <!-- Background Text -->
+          <div
+            class="absolute inset-0 flex p-4 max-lg:opacity-5 lg:opacity-100 pointer-events-none"
+          >
+            <span
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="sm:text-8xl max-sm:text-6xl font-bold text-teal-800 dark:text-white whitespace-nowrap"
+            >
+              ទេសចរណ៍កម្ពុជា
+            </span>
+          </div>
+
+          <!-- Circles -->
+          <div data-aos="zoom-in" class="absolute inset-0 pointer-events-none">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              class="absolute max-sm:top-60 top-20 right-20 w-32 h-32 max-sm:h-10 max-sm:w-10 max-sm:left-10 bg-green-700 dark:bg-dark_background rounded-[10px] opacity-80"
+            ></div>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              class="absolute top-40 right-120 w-16 h-16 bg-green-400 dark:bg-dark-light-primary rounded-[10px]"
+            ></div>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              class="absolute bottom-0 right-150 w-20 h-20 bg-yellow-500 dark:bg-dark-secondary rounded-[10px]"
+            ></div>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              class="absolute bottom-40 right-15 w-12 h-12 bg-orange-300 dark:bg-dark-primary rounded-[10px]"
+            ></div>
+          </div>
+
+          <!-- Content -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center relative">
+            <!-- Left Content -->
+            <div class="space-y-8">
+              <h1 class="max-sm:pr-4">
+                <span
+                  class="md:text-[38px] sm:text-[28px] max-sm:text-[26px] text-center text-secondary dark:text-dark-secondary font-bold py-10 max-md:mt-5"
+                  id="travel-typing"
+                ></span>
+                <span
+                  class="blinking-cursor max-md:text-[38px] md:text-[48px] sm:text-[28px] max-sm:text-[22px] text-center text-secondary dark:text-dark-secondary font-bold py-10 max-md:mt-5"
+                  >|</span
+                >
+              </h1>
+              <p
+                data-aos-delay="300"
+                data-aos="fade-right"
+                class="text-accent dark:text-white text-lg leading-relaxed max-w-md"
+              >
+                កម្ពុជា​ជា​គោលដៅ​ទេសចរណ៍​ដ៏​អស្ចារ្យ​មួយ
+                ដែល​មាន​ទាំង​ទេសភាព​ធម្មជាតិ​ស្រស់​ស្អាត
+                បេតិកភណ្ឌ​ប្រវត្តិសាស្ត្រ​ដ៏​សម្បូរ​បែប
+                និង​ប្រជាជន​រួសរាយ​រាក់ទាក់។
+                សូម​មក​ស្វែងយល់​និង​បង្កើត​អនុស្សាវរីយ៍​ដែល​មិន​អាច​បំភ្លេច​បាន។
+              </p>
+            </div>
+
+            <!-- Right Content - Images -->
+            <div class="relative">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                class="w-80 h-80 rounded-[10px] overflow-hidden mx-auto mb-8 shadow-2xl"
+              >
+                <img
+                  src="img/home/tourism/04.png"
+                  alt="ទេសភាពធម្មជាតិ"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="600"
+                class="absolute -top-4 right-3 w-24 h-24 rounded-[10px] overflow-hidden shadow-lg"
+              >
+                <img
+                  src="img/home/tourism/03.png"
+                  alt="សម្រស់ទេសភាព"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                class="absolutebottom-8 max-lg:left-18 lg:-left-8 w-32 h-32 rounded-[10px] overflow-hidden shadow-lg"
+              >
+                <img
+                  src="img/home/tourism/02.png"
+                  alt="សៀមរាប"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                class="absolute bottom-0 right-8 w-25 h-25 rounded-[10px] overflow-hidden shadow-lg"
+              >
+                <img
+                  src="img/home/tourism/image01.png"
+                  alt="ភ្ញៀវទេសចរ"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section3 -->
+      <section
+        class="relative rounded-[10px] sm:py-5 max-sm:pt-6 overflow-hidden"
+      >
+        <div
+          class="absolute top-28 -left-40 w-40 h-40 dark:bg-dark-secondary bg-teal-500 blur-[80px] rounded-full opacity-80 mix-blend-multiply animate-float-slow hidden md:block"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        ></div>
+
+        <div
+          class="absolute bottom-35 right-10 w-32 h-22 dark:bg-white bg-secondary blur-[80px] rounded-full opacity-80 mix-blend-multiply animate-float-fast hidden md:block"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        ></div>
+        <div class="lg:container mx-auto px-4 relative z-0">
+          <div
+            class="lg:flex max-lg:items-center max-lg:justify-center lg:items-center lg:space-x-12"
+          >
+            <div class="relative max-sm:mb-6 sm:mb-12 lg:mb-0">
+              <div
+                class="relative w-full h-[400px] lg:h-[400px] rounded-[10px] overflow-hidden shadow-3xl transform hover:scale-105 transition-transform duration-500 ease-in-out"
+              >
+                <img
+                  src="img/hero/slide2.jpg"
+                  alt="Beautiful Cambodian Landscape"
+                  class="w-full h-full object-cover"
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                />
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col max-lg:items-center sm:space-y-8 max-sm:space-y-3 text-center lg:text-left"
+            >
+              <h2
+                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-dark-secondary leading-tight animate-slide-in-up"
+                data-aos="fade-up"
+              >
+                <span class="block text-teal-800 dark:text-white"
+                  >ស្វែងយល់ពីវប្បធម៌
+                </span>
+                <span class="block">និងធម្មជាតិក្នុងកម្ពុជា</span>
+              </h2>
+              <p
+                class="text-lg md:text-xl dark:text-white text-accent max-w-xl mx-auto lg:mx-0 animate-slide-in-up"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                ដំណើរគឺជាការរៀនសូត្រដ៏ពិសេស។ សូមមកស្វែងយល់ពីសិល្បៈ វប្បធម៌
+                និងសម្រស់ធម្មជាតិ ដែលនឹងបន្សល់អនុស្សាវរីយ៍មិនអស់កាល។
+              </p>
+              <a
+                class="group w-fit flex cursor-pointer justify-center py-6 mt-6 relative h-12 items-center overflow-hidden rounded-[10px] border border-neutral-200 bg-teal-800 dark:bg-dark-secondary px-6 font-medium text-white transition-all active:translate-y-[2px] active:shadow-none"
+                data-aos="zoom-in"
+                href="./html/desti.html"
+              >
+                ចាប់ផ្តើមដំណើររបស់អ្នក
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section class="py-4 z-0 relative">
+        <!-- Background circle -->
+
+        <!-- Header -->
+        <div class="text-center relative z-0">
+          <h2
+            data-aos="fade-down"
+            data-aos-delay="200"
+            class="max-md:text-3xl text-center max-sm:px-4 md:text-4xl pb-4 sm:text-2xl max-sm:text-[22px] text-secondary dark:text-dark-secondary font-bold md:mt-8 max-md:mt-5"
+          >
+            <span
+              class="text-2xl md:text-3xl font-extrabold px-[10px] py-[2px] rounded-[10px] bg-white text-secondary dark:text-dark-secondary"
+              >២</span
+            >
+            ទេសចរណ៍ប្រាសាទ ព្រៃភ្នំ និងសមុទ្រដែលសម្បូរភ្ញៀវទេសចរណ៍
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="py-4 text-accent max-sm:px-4 dark:text-white max-w-2xl text-[18px] mx-auto"
+          >
+            ខេត្តទេសចរណ៍ដែលសម្បូរដោយធនធានធម្មជាតិដូចជាសមុទ្រ និង ព្រៃភ្នំ
+            ដែលទាក់ទាញ ភ្ញៀវទេសចរណ៍គ្រប់វ័យមកទស្សនាកម្សាន្ត ទាំងជាតិ
+            និងអន្តរជាតិ
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div
+          id="place_Suggestion"
+          class="mt-4 grid max-md:grid-cols-2 md:grid-cols-3 max-sm:grid-cols-1  gap-8 relative z-0 lg:container mx-auto px-4"
+        >
+          <!-- Province 1 -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white">
+      <div
+        class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left text-sm sm:text-base"
+      >
+        <div class="flex justify-center md:justify-start">
+          <a class="" href="index.html">
+            <img
+              src="img/lofoFooter.png"
+              alt="Logo 1"
+              class="w-32 h-32 object-contain"
+            />
+          </a>
+        </div>
+
+        <div
+          class="flex flex-col max-lg:mt-3 items-center md:items-start gap-5"
+        >
+          <h4 class="text-primary dark:text-blue-900 font-semibold text-lg">
+            បណ្តាញសង្គម
+          </h4>
+          <div class="flex gap-4 text-primary dark:text-blue-900">
+            <!-- Facebook -->
+            <a href="">
+              <button
+                class="group relative inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200 bg-white transition-all duration-300 ease-in-out active:translate-y-[2px] active:shadow-none"
+              >
+                <i
+                  class="fa-brands fa-facebook-f text-3xl text-primary dark:text-blue-900"
+                ></i>
+              </button>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              class="cursor-pointer"
+              href="https://www.tiktok.com/@derlengwithus?_t=ZS-8zEBbIsQAmm&_r=1"
+            >
+              <button
+                class="group relative cursor-pointer inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200 bg-white transition-all duration-300 ease-in-out active:translate-y-[2px] active:shadow-none"
+              >
+                <i
+                  class="fa-brands fa-tiktok text-3xl text-primary dark:text-blue-900"
+                ></i>
+              </button>
+            </a>
+
+            <!-- YouTube -->
+            <a
+              class="cursor-pointer"
+              href="https://www.youtube.com/@DerLeng-withUs"
+            >
+              <button
+                class="group relative cursor-pointer inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200 bg-white transition-all duration-300 ease-in-out active:translate-y-[2px] active:shadow-none"
+              >
+                <i
+                  class="fa-brands fa-youtube text-3xl text-primary dark:text-blue-900"
+                ></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-5 items-center md:items-start">
+          <h4 class="text-primary dark:text-blue-900 font-semibold text-lg">
+            តំណភ្ជាប់រហ័ស
+          </h4>
+          <a
+            href="index.html"
+            class="hover:text-teal-700 text-[18px] text-accent dark:text-accent dark:hover:text-blue-600 transition"
+            >ទំព័រដើម</a
+          >
+          <a
+            href="html/about.html"
+            class="hover:text-teal-700 text-[18px] text-accent dark:text-accent dark:hover:text-blue-600 transition"
+            >អំពីពួកយើង</a
+          >
+          <a
+            href="html/desti.html"
+            class="hover:text-teal-700 text-[18px] text-accent dark:text-accent dark:hover:text-blue-600 transition"
+            >គោលដៅ</a
+          >
+        </div>
+
+        <div class="flex flex-col gap-5 items-center md:items-start">
+          <h4
+            class="text-primary dark:text-blue-900 font-semibold text-lg max-sm:text-center"
+          >
+            ឧបត្ថម្ភដោយ
+          </h4>
+          <!-- <p class="dark:text-accent">
+            Institute of Science and Technology Advanced Development (ISTAD)
+          </p> -->
+          <a class="" href="index.html">
+            <img
+              src="img/logo/istad-logo-2024 (3).png"
+              alt="Logo 1"
+              class="w-50 object-contain"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="/js/province_categories.js"></script>
+    <script src="./js/Hometype.js"></script>
+  </body>
 </html>
